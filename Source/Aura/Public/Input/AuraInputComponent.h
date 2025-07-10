@@ -20,7 +20,7 @@ public:
 };
 
 template<class UserClass, typename PressedFuncType, typename ReleasedFuncType, typename HeldFuncType>
-inline void UAuraInputComponent::BindAbilityAction(const UAuraInputConfig* InputConfig, UserClass* Object, PressedFuncType PressedFunc, ReleasedFuncType ReleasedFunc, HeldFuncType HeldFunc)
+inline void UAuraInputComponent::BindAbilityAction(const UAuraInputConfig* InputConfig, UserClass* Object, PressedFuncType PressedFunc, ReleasedFuncType ReleasedFunc, HeldFuncType HeldFunc)//PressedFunc 按下函数 ；ReleasedFunc 抬起按键函数；HeldFunc  实现功能函数
 {
 	check(InputConfig);
 
@@ -30,7 +30,7 @@ inline void UAuraInputComponent::BindAbilityAction(const UAuraInputConfig* Input
 		{
 			if (PressedFunc)
 			{
-				BindAction(Action.InputAction, ETriggerEvent::Started, Object, HeldFunc, Action.InputTag);
+				BindAction(Action.InputAction, ETriggerEvent::Started, Object, PressedFunc, Action.InputTag);
 			}
 			if (ReleasedFunc)
 			{
@@ -43,3 +43,9 @@ inline void UAuraInputComponent::BindAbilityAction(const UAuraInputConfig* Input
 		}
 	}
 }
+/*ETriggerEvent
+枚举值	    触发时机	                    示例场景
+Started	    按键按下的瞬间	                按下开火键（Fire）
+Triggered	按住按键时持续触发	            按住移动键（Move）持续移动
+Completed	按键释放时触发	                松开开火键（Fire）
+Canceled	输入被强制中断（如 UI 遮挡）	游戏暂停时取消输入*/

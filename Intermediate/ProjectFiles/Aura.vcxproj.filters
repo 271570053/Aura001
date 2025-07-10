@@ -11,7 +11,10 @@
     <None Include="..\..\Source\AuraEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <None Include="..\..\.vsconfig" />
+    <None Include="..\..\README.md" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -114,6 +117,9 @@
     <Filter Include="Source\Aura\Private\Input">
       <UniqueIdentifier>{C3AD8B08-3AA0-3E95-A897-C6703F5DA59C}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Aura\Private\Input\AuraInputComponent.cpp">
+      <Filter>Source\Aura\Private\Input</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Aura\Private\Input\AuraInputConfig.cpp">
       <Filter>Source\Aura\Private\Input</Filter>
     </ClCompile>
@@ -231,6 +237,9 @@
     <Filter Include="Source\Aura\Public\Input">
       <UniqueIdentifier>{990A1480-E998-3054-91AE-4C9BB6814F97}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Aura\Public\Input\AuraInputComponent.h">
+      <Filter>Source\Aura\Public\Input</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Aura\Public\Input\AuraInputConfig.h">
       <Filter>Source\Aura\Public\Input</Filter>
     </ClInclude>

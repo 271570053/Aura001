@@ -193,7 +193,10 @@
     <None Include="..\..\Aura.uproject"/>
     <None Include="..\..\Source\Aura.Target.cs"/>
     <None Include="..\..\Source\AuraEditor.Target.cs"/>
+    <None Include="..\..\.gitattributes"/>
+    <None Include="..\..\.gitignore"/>
     <None Include="..\..\.vsconfig"/>
+    <None Include="..\..\README.md"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
@@ -276,6 +279,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Private\Input\AuraInputComponent.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Aura\Private\Input\AuraInputConfig.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -340,6 +348,7 @@
     <ClInclude Include="..\..\Source\Aura\Public\AuraCharacter\AuraCharacterBase.h"/>
     <ClInclude Include="..\..\Source\Aura\Public\AuraCharacter\EnemyCharacter.h"/>
     <ClInclude Include="..\..\Source\Aura\Public\Game\AuraGameModeBase.h"/>
+    <ClInclude Include="..\..\Source\Aura\Public\Input\AuraInputComponent.h"/>
     <ClInclude Include="..\..\Source\Aura\Public\Input\AuraInputConfig.h"/>
     <ClInclude Include="..\..\Source\Aura\Public\Interfacion\CombatInterface.h"/>
     <ClInclude Include="..\..\Source\Aura\Public\Interfacion\EnemyInterface.h"/>

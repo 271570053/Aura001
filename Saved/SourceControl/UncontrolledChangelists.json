@@ -10,7 +10,15 @@
 				"E:/UE5/Aura/Content/BluePrint/UI/AttributeMenu/WBP_TextValueRow.uasset",
 				"E:/UE5/Aura/Content/BluePrint/Actor/TestActor/GE_TestAttributeBased.uasset",
 				"E:/UE5/Aura/Content/BluePrint/Character/Aura/BP_AuraCharater.uasset",
-				"E:/UE5/Aura/Content/BluePrint/AbilitySystem/GameplayAbilities/GA_TestGameplayAbility.uasset"
+				"E:/UE5/Aura/Content/BluePrint/AbilitySystem/GameplayAbilities/GA_TestGameplayAbility.uasset",
+				"E:/UE5/Aura/Content/BluePrint/Input/InputAction/IA_LMB.uasset",
+				"E:/UE5/Aura/Content/BluePrint/Input/DA_AuraInputConfig.uasset",
+				"E:/UE5/Aura/Content/BluePrint/Input/InputAction/IA_2.uasset",
+				"E:/UE5/Aura/Content/BluePrint/Input/InputAction/IA_3.uasset",
+				"E:/UE5/Aura/Content/BluePrint/Input/InputAction/IA_4.uasset",
+				"E:/UE5/Aura/Content/BluePrint/Input/InputAction/IA_1.uasset",
+				"E:/UE5/Aura/Content/BluePrint/Input/InputAction/IA_RMB.uasset",
+				"E:/UE5/Aura/Content/BluePrint/Input/IMC_AuraContext.uasset"
 			]
 		}
 	]

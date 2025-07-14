@@ -19,6 +19,7 @@ public:
 	void BindAbilityAction(const UAuraInputConfig* InputConfig,UserClass*Object,PressedFuncType PressedFunc, ReleasedFuncType ReleasedFunc,HeldFuncType HeldFunc);
 };
 
+//模板函数实现
 template<class UserClass, typename PressedFuncType, typename ReleasedFuncType, typename HeldFuncType>
 inline void UAuraInputComponent::BindAbilityAction(const UAuraInputConfig* InputConfig, UserClass* Object, PressedFuncType PressedFunc, ReleasedFuncType ReleasedFunc, HeldFuncType HeldFunc)//PressedFunc 按下函数 ；ReleasedFunc 抬起按键函数；HeldFunc  实现功能函数
 {

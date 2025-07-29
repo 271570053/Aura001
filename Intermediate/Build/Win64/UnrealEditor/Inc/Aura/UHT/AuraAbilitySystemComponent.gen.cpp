@@ -6,16 +6,103 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "Aura/Public/AbilitySystem/AuraAbilitySystemComponent.h"
+#include "ActiveGameplayEffectHandle.h"
+#include "GameplayEffect.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeAuraAbilitySystemComponent() {}
 // Cross Module References
 	AURA_API UClass* Z_Construct_UClass_UAuraAbilitySystemComponent();
 	AURA_API UClass* Z_Construct_UClass_UAuraAbilitySystemComponent_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent();
+	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent_NoRegister();
+	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FActiveGameplayEffectHandle();
+	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayEffectSpec();
 	UPackage* Z_Construct_UPackage__Script_Aura();
 // End Cross Module References
+	DEFINE_FUNCTION(UAuraAbilitySystemComponent::execClientEffectApplied)
+	{
+		P_GET_OBJECT(UAbilitySystemComponent,Z_Param_AbilitySystemComponent);
+		P_GET_STRUCT(FGameplayEffectSpec,Z_Param_EffectSpec);
+		P_GET_STRUCT(FActiveGameplayEffectHandle,Z_Param_ActiveEffectHandle);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ClientEffectApplied_Implementation(Z_Param_AbilitySystemComponent,Z_Param_EffectSpec,Z_Param_ActiveEffectHandle);
+		P_NATIVE_END;
+	}
+	struct AuraAbilitySystemComponent_eventClientEffectApplied_Parms
+	{
+		UAbilitySystemComponent* AbilitySystemComponent;
+		FGameplayEffectSpec EffectSpec;
+		FActiveGameplayEffectHandle ActiveEffectHandle;
+	};
+	static FName NAME_UAuraAbilitySystemComponent_ClientEffectApplied = FName(TEXT("ClientEffectApplied"));
+	void UAuraAbilitySystemComponent::ClientEffectApplied(UAbilitySystemComponent* AbilitySystemComponent, FGameplayEffectSpec const& EffectSpec, FActiveGameplayEffectHandle ActiveEffectHandle)
+	{
+		AuraAbilitySystemComponent_eventClientEffectApplied_Parms Parms;
+		Parms.AbilitySystemComponent=AbilitySystemComponent;
+		Parms.EffectSpec=EffectSpec;
+		Parms.ActiveEffectHandle=ActiveEffectHandle;
+		ProcessEvent(FindFunctionChecked(NAME_UAuraAbilitySystemComponent_ClientEffectApplied),&Parms);
+	}
 	void UAuraAbilitySystemComponent::StaticRegisterNativesUAuraAbilitySystemComponent()
 	{
+		UClass* Class = UAuraAbilitySystemComponent::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "ClientEffectApplied", &UAuraAbilitySystemComponent::execClientEffectApplied },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_AbilitySystemComponent_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_AbilitySystemComponent;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_EffectSpec_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_EffectSpec;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ActiveEffectHandle;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::NewProp_AbilitySystemComponent_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::NewProp_AbilitySystemComponent = { "AbilitySystemComponent", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AuraAbilitySystemComponent_eventClientEffectApplied_Parms, AbilitySystemComponent), Z_Construct_UClass_UAbilitySystemComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::NewProp_AbilitySystemComponent_MetaData), Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::NewProp_AbilitySystemComponent_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::NewProp_EffectSpec_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::NewProp_EffectSpec = { "EffectSpec", nullptr, (EPropertyFlags)0x0010000008000082, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AuraAbilitySystemComponent_eventClientEffectApplied_Parms, EffectSpec), Z_Construct_UScriptStruct_FGameplayEffectSpec, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::NewProp_EffectSpec_MetaData), Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::NewProp_EffectSpec_MetaData) }; // 4290086594
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::NewProp_ActiveEffectHandle = { "ActiveEffectHandle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AuraAbilitySystemComponent_eventClientEffectApplied_Parms, ActiveEffectHandle), Z_Construct_UScriptStruct_FActiveGameplayEffectHandle, METADATA_PARAMS(0, nullptr) }; // 179499981
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::NewProp_AbilitySystemComponent,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::NewProp_EffectSpec,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::NewProp_ActiveEffectHandle,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/AbilitySystem/AuraAbilitySystemComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAuraAbilitySystemComponent, nullptr, "ClientEffectApplied", nullptr, nullptr, Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::PropPointers), sizeof(AuraAbilitySystemComponent_eventClientEffectApplied_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040CC1, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::Function_MetaDataParams), Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::PropPointers) < 2048);
+	static_assert(sizeof(AuraAbilitySystemComponent_eventClientEffectApplied_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UAuraAbilitySystemComponent);
 	UClass* Z_Construct_UClass_UAuraAbilitySystemComponent_NoRegister()
@@ -25,6 +112,7 @@ void EmptyLinkFunctionForGeneratedCodeAuraAbilitySystemComponent() {}
 	struct Z_Construct_UClass_UAuraAbilitySystemComponent_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -36,6 +124,10 @@ void EmptyLinkFunctionForGeneratedCodeAuraAbilitySystemComponent() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Aura,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UAuraAbilitySystemComponent_Statics::DependentSingletons) < 16);
+	const FClassFunctionLinkInfo Z_Construct_UClass_UAuraAbilitySystemComponent_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UAuraAbilitySystemComponent_ClientEffectApplied, "ClientEffectApplied" }, // 289043583
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UAuraAbilitySystemComponent_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UAuraAbilitySystemComponent_Statics::Class_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
@@ -54,11 +146,11 @@ void EmptyLinkFunctionForGeneratedCodeAuraAbilitySystemComponent() {}
 		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		nullptr,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x00B010A4u,
@@ -84,9 +176,9 @@ void EmptyLinkFunctionForGeneratedCodeAuraAbilitySystemComponent() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Aura_Source_Aura_Public_AbilitySystem_AuraAbilitySystemComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UAuraAbilitySystemComponent, UAuraAbilitySystemComponent::StaticClass, TEXT("UAuraAbilitySystemComponent"), &Z_Registration_Info_UClass_UAuraAbilitySystemComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAuraAbilitySystemComponent), 1623887339U) },
+		{ Z_Construct_UClass_UAuraAbilitySystemComponent, UAuraAbilitySystemComponent::StaticClass, TEXT("UAuraAbilitySystemComponent"), &Z_Registration_Info_UClass_UAuraAbilitySystemComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAuraAbilitySystemComponent), 2570238341U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Aura_Source_Aura_Public_AbilitySystem_AuraAbilitySystemComponent_h_2675883140(TEXT("/Script/Aura"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Aura_Source_Aura_Public_AbilitySystem_AuraAbilitySystemComponent_h_3726987340(TEXT("/Script/Aura"),
 		Z_CompiledInDeferFile_FID_Aura_Source_Aura_Public_AbilitySystem_AuraAbilitySystemComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Aura_Source_Aura_Public_AbilitySystem_AuraAbilitySystemComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -19,7 +19,10 @@
 				"E:/UE5/Aura/Content/BluePrint/Input/InputAction/IA_1.uasset",
 				"E:/UE5/Aura/Content/BluePrint/Input/InputAction/IA_RMB.uasset",
 				"E:/UE5/Aura/Content/BluePrint/Input/IMC_AuraContext.uasset",
-				"E:/UE5/Aura/Content/BluePrint/Player/BP_AuraPlayerController.uasset"
+				"E:/UE5/Aura/Content/BluePrint/Player/BP_AuraPlayerController.uasset",
+				"E:/UE5/Aura/Content/Map/StartupMap.umap",
+				"E:/UE5/Aura/Content/Assets/Dungeon/Beacon/SM_Beacon.uasset",
+				"E:/UE5/Aura/Content/BluePrint/AbilitySystem/GameplayAbilities/Fire/FireBolt/BP_FireBolt.uasset"
 			]
 		}
 	]

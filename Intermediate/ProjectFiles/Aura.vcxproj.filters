@@ -93,6 +93,9 @@
     <ClCompile Include="..\..\Source\Aura\Private\Actor\AuraEffectActor.cpp">
       <Filter>Source\Aura\Private\Actor</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Private\Actor\AuraProjectile.cpp">
+      <Filter>Source\Aura\Private\Actor</Filter>
+    </ClCompile>
     <Filter Include="Source\Aura\Private\AuraCharacter">
       <UniqueIdentifier>{14D0255A-184F-3C2C-B941-FAC815A1DD1C}</UniqueIdentifier>
     </Filter>
@@ -214,6 +217,9 @@
       <UniqueIdentifier>{FB1C9C32-0E54-3D43-B3D9-FD86BB6EBCF1}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Aura\Public\Actor\AuraEffectActor.h">
+      <Filter>Source\Aura\Public\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Aura\Public\Actor\AuraProjectile.h">
       <Filter>Source\Aura\Public\Actor</Filter>
     </ClInclude>
     <Filter Include="Source\Aura\Public\AuraCharacter">

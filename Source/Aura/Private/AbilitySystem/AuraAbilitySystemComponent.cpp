@@ -8,7 +8,7 @@
 
 void UAuraAbilitySystemComponent::AbilityActorInfoSet()
 {
-	OnGameplayEffectAppliedDelegateToSelf.AddUObject(this, &UAuraAbilitySystemComponent::ClientEffectApplied_Implementation);//只需在此绑定这个委托就可自动实现Effect的监听
+	OnGameplayEffectAppliedDelegateToSelf.AddUObject(this, &UAuraAbilitySystemComponent::ClientEffectApplied);//只需在此绑定这个委托就可自动实现Effect的监听
 
 	const FAuraGameplayTags GameplayTags= FAuraGameplayTags::Get();
 	//GameplayTags.Attributes_Secondary_Aromr.ToString(" ")

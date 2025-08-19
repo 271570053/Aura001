@@ -75,6 +75,12 @@
     <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\Abilities\AuraProjectileSpell.cpp">
       <Filter>Source\Aura\Private\AbilitySystem\Abilities</Filter>
     </ClCompile>
+    <Filter Include="Source\Aura\Private\AbilitySystem\AnilityTask">
+      <UniqueIdentifier>{C3CC0F1D-DEF4-385C-858F-43D288A6B24B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\AnilityTask\TargetDataUnderMouse.cpp">
+      <Filter>Source\Aura\Private\AbilitySystem\AnilityTask</Filter>
+    </ClCompile>
     <Filter Include="Source\Aura\Private\AbilitySystem\Data">
       <UniqueIdentifier>{1DE59CCC-C5AD-3B72-B94D-B45AD4BE9D00}</UniqueIdentifier>
     </Filter>
@@ -203,6 +209,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\Aura\Public\AbilitySystem\Abilities\AuraProjectileSpell.h">
       <Filter>Source\Aura\Public\AbilitySystem\Abilities</Filter>
+    </ClInclude>
+    <Filter Include="Source\Aura\Public\AbilitySystem\AnilityTask">
+      <UniqueIdentifier>{B37DB9A4-9F0F-3B03-9B80-F5DB416BF245}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Aura\Public\AbilitySystem\AnilityTask\TargetDataUnderMouse.h">
+      <Filter>Source\Aura\Public\AbilitySystem\AnilityTask</Filter>
     </ClInclude>
     <Filter Include="Source\Aura\Public\AbilitySystem\Data">
       <UniqueIdentifier>{FF426A13-05E2-3736-B7C4-5F4B5E95E426}</UniqueIdentifier>

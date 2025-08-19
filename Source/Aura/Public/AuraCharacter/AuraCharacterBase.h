@@ -30,6 +30,11 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Combat")
 	TObjectPtr<USkeletalMeshComponent> Weapon;
 
+	UPROPERTY(EditAnywhere, Category = "Combat")
+	FName WeaponTipSocketName;
+
+	virtual FVector GetCombatSocketLocation()override;
+
 	UPROPERTY()//如果没有这个属性反射，引擎不会自动跟踪他的生命周期；如果这个指针指向的对象被销毁还被引用，会导致悬垂指针/崩溃；GC（垃圾回收）会不知道这个对象还在被引用，会导致提前销毁；他不会出现在蓝图中；不会被网络复制或保存
 	TObjectPtr<UAbilitySystemComponent> AbilitySystemComponent;
 
